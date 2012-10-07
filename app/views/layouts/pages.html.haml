@@ -1,0 +1,10 @@
+- content_for :content do
+  .scroll-wrapper
+    %section.leader.span9{style: "background-image: url(#{image_path params[:id]}.jpg)"}
+      %h2.span3
+        = yield :title
+        %small= yield :caption
+
+    %section.content.span4= yield
+
+= render :template => 'layouts/application'

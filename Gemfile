@@ -11,9 +11,14 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'bootstrap-helper', :git => 'git://github.com/LoonyBin/bootstrap-helper.git'
 gem 'haml-rails'
 gem 'high_voltage'
 gem 'inherited_resources'
 gem 'jquery-rails'
 gem 'pg'
 gem 'unicorn'
+
+group :development, :test do
+  gem 'rspec-rails'
+end

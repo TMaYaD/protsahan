@@ -1,0 +1,128 @@
+.pull-center {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  header, #body, footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+  }
+
+  @header-height: 62px;
+  @footer-height: 4em;
+
+  header {
+    top: 0;
+    max-height: @header-height;
+  }
+  #body {
+    top: @header-height;
+    bottom: @footer-height;
+  }
+  footer {
+    max-height: @footer-height;
+    bottom: 0;
+  }
+
+  #body {
+    overflow-x: auto;
+    overflow-y: -moz-hidden-unscrollable;
+    z-index: -1;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+  }
+
+  .scroll-wrapper {
+    height: 100%;
+    float: left;
+    margin-right: -30000px;
+  }
+
+  @column-width: 325px; //Make responsive
+  @column-gap: 30px;
+
+  .leader {
+    background-image: url('http://placehold.it/1170x500');
+    font-size: xx-large;
+    -webkit-background-size:  cover;
+    -moz-background-size:     cover;
+    background-size:          cover;
+
+    position: relative;
+    height: 100%;
+  //  width: 4 * @column-width;
+
+    h2 {
+      background: none repeat scroll 0 0 rgba(255, 255, 255, 0.6);
+      border-left: thick solid white;
+      -webkit-box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.1), 1px 0 10px rgba(255, 255, 255, 0.1);
+      -moz-box-shadow:    inset -1px 0 0 rgba(255, 255, 255, 0.1), 1px 0 10px rgba(255, 255, 255, 0.1);
+      box-shadow:         inset -1px 0 0 rgba(255, 255, 255, 0.1), 1px 0 10px rgba(255, 255, 255, 0.1);
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      top: 0;
+      margin: 0;
+      padding: 1em;
+
+  //    width: @column-width;
+
+      color: #0056D6;
+      text-align: right;
+
+      small {
+        display: block;
+        position: absolute;
+        bottom: 2em;
+        right: 0;
+        padding: 1em;
+        color: #1F587E;
+      }
+    }
+  }
+
+  .content {
+    -webkit-column-width: @column-width;
+    -moz-column-width:    @column-width;
+    column-width:         @column-width;
+
+    -webkit-column-gap:   @column-gap;
+    -moz-column-gap:      @column-gap;
+    column-gap:           @column-gap;
+  //  width: @column-width;
+    height: 100%;
+  }
+
+}
+.contact_us .leader {
+  background-image: url('/images/leader/contact_us.jpg');
+}
+.educare .leader {
+  background-image: url('/images/leader/educare.jpg');
+}
+.stree .leader {
+  background-image: url('/images/leader/stree.jpg');
+}
+.artisan_honour .leader {
+  background-image: url('/images/leader/artisan_honour.jpg');
+}
+.organizational_profile .leader {
+  background-image: url('/images/leader/organizational_profile.jpg');
+}
+.strategic_focus .leader {
+  background-image: url('/images/leader/strategic_focus.jpg');
+}
+.our_rationale .leader {
+  background-image: url('/images/leader/our_rationale.jpg');
+}
+.our_team .leader {
+  background-image: url('/images/leader/our_team.jpg');
+}
+.work_culture .leader {
+  background-image: url('/images/leader/work_culture.jpg');
+}
+.recognition_received .leader {
+  background-image: url('/images/leader/recognition_received.jpg');
+}
