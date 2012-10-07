@@ -17,8 +17,10 @@ gem 'high_voltage'
 gem 'inherited_resources'
 gem 'jquery-rails'
 gem 'pg'
+gem 'redcarpet'
 gem 'unicorn'
 
 group :development, :test do
+  gem 'pry-rails'
   gem 'rspec-rails'
 end

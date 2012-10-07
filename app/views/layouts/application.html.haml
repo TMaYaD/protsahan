@@ -26,16 +26,16 @@
 
         = bar.nav do
           = bar.dropdown 'Projects' do
-            = bar.item 'Educare',         page_path('educare')
-            = bar.item 'Stree',           page_path('stree')
-            = bar.item 'Artisan Honour',  page_path('artisan-honour')
+            = bar.item 'Educare',         page_path('projects/educare')
+            = bar.item 'Stree',           page_path('projects/stree')
+            = bar.item 'Artisan Honour',  page_path('projects/artisan-honour')
           = bar.dropdown 'About Us' do
-            = bar.item 'Organizational Profile',  page_path('organizational_profile')
-            = bar.item 'Strategic Focus',         page_path('strategic_focus')
-            = bar.item 'Our Rationale',           page_path('our_rationale')
-            = bar.item 'Our Team',                page_path('our_team')
-            = bar.item 'Work Culture',            page_path('work_culture')
-            = bar.item 'Recognition Received',    page_path('recognition_received')
+            = bar.item 'Organizational Profile',  page_path('about_us/organizational-profile')
+            = bar.item 'Strategic Focus',         page_path('about_us/strategic-focus')
+            = bar.item 'Our Rationale',           page_path('about_us/our-rationale')
+            = bar.item 'Our Team',                page_path('about_us/our-team')
+            = bar.item 'Work Culture',            page_path('about_us/work-culture')
+            = bar.item 'Recognition Received',    page_path('about_us/recognition-received')
           = bar.item 'Contact Us', page_path('contact_us')
 
     #body= content_for?(:content) ? yield(:content) : yield
