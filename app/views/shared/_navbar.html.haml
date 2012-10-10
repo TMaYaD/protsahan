@@ -1,0 +1,13 @@
+= navbar.nav do
+  = navbar.dropdown 'Projects' do
+    = navbar.item 'Educare',         article_path('projects/educare')
+    = navbar.item 'Stree',           article_path('projects/stree')
+    = navbar.item 'Artisan Honour',  article_path('projects/artisan-honour')
+  = navbar.dropdown 'About Us' do
+    = navbar.item 'Organizational Profile',  article_path('about_us/organizational-profile')
+    = navbar.item 'Strategic Focus',         article_path('about_us/strategic-focus')
+    = navbar.item 'Our Rationale',           article_path('about_us/our-rationale')
+    = navbar.item 'Our Team',                article_path('about_us/our-team')
+    = navbar.item 'Work Culture',            article_path('about_us/work-culture')
+    = navbar.item 'Recognition Received',    article_path('about_us/recognition-received')
+  = navbar.item 'Contact Us', article_path('contact_us')

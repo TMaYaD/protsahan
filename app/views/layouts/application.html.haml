@@ -1,49 +1,20 @@
-!!! 5
-%html(lang='en')
-  %head
-    %meta(charset='utf-8')
-    %meta(http-equiv='X-UA-Compatible' content='IE=Edge,chrome=1')
-    %meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    %title= content_for?(:title) ? yield(:title) : 'Protsahan'
-    = csrf_meta_tags
-    / Le HTML5 shim, for IE6-8 support of HTML elements
-    /[if lt IE 9]
-      = javascript_include_tag 'http://html5shim.googlecode.com/svn/trunk/html5.js'
-    = stylesheet_link_tag 'application', :media => 'all'
-    %link(href='images/apple-touch-icon-144x144.png' rel='apple-touch-icon-precomposed' sizes='144x144')
-    %link(href='images/apple-touch-icon-114x114.png' rel='apple-touch-icon-precomposed' sizes='114x114')
-    %link(href='images/apple-touch-icon-72x72.png' rel='apple-touch-icon-precomposed' sizes='72x72')
-    %link(href='images/apple-touch-icon.png' rel='apple-touch-icon-precomposed')
-    %link(href='images/favicon.ico' rel='shortcut icon')
+- content_for :body do
+  %header
+    - topbar :fluid => true do |bar|
+      = bar.collapse
+      = bar.brand_name 'Protsahan', root_path
+      %p.pull-left.navbar-text Empowering women
+      %p.pull-left.divider-vertical
 
-  %body
-    %header
-      - topbar :fluid => true do |bar|
-        = bar.collapse
-        = bar.brand_name 'Protsahan', root_path
-        %p.pull-left.navbar-text Empowering women
-        %p.pull-left.divider-vertical
+      = render 'shared/navbar', navbar: bar
 
-        = bar.nav do
-          = bar.dropdown 'Projects' do
-            = bar.item 'Educare',         page_path('projects/educare')
-            = bar.item 'Stree',           page_path('projects/stree')
-            = bar.item 'Artisan Honour',  page_path('projects/artisan-honour')
-          = bar.dropdown 'About Us' do
-            = bar.item 'Organizational Profile',  page_path('about_us/organizational-profile')
-            = bar.item 'Strategic Focus',         page_path('about_us/strategic-focus')
-            = bar.item 'Our Rationale',           page_path('about_us/our-rationale')
-            = bar.item 'Our Team',                page_path('about_us/our-team')
-            = bar.item 'Work Culture',            page_path('about_us/work-culture')
-            = bar.item 'Recognition Received',    page_path('about_us/recognition-received')
-          = bar.item 'Contact Us', page_path('contact_us')
+  #body= content_for?(:content) ? yield(:content) : yield
 
-    #body= content_for?(:content) ? yield(:content) : yield
+  %footer
+    %p.pull-center &copy; Protsahan 2012 - Built by #{link_to 'loonyb.in', 'http://loonyb.in'}
+  /
+    Javascripts
+    \==================================================
+  / Placed at the end of the document so the pages load faster
 
-    %footer
-      %p.pull-center &copy; Protsahan 2012 - Built by #{link_to 'loonyb.in', 'http://loonyb.in'}
-    /
-      Javascripts
-      \==================================================
-    / Placed at the end of the document so the pages load faster
-    = javascript_include_tag 'application'
+= render :template => 'layouts/skeleton'

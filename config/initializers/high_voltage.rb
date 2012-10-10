@@ -1,1 +1,1 @@
-HighVoltage.layout = 'pages'
+HighVoltage.layout = 'skeleton'
