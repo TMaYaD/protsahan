@@ -1,3 +1,19 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+@import 'variables';
+
 .pull-center {
   text-align: center;
 }
@@ -56,11 +72,11 @@
   //  width: 4 * @column-width;
 
     h2 {
-      background: none repeat scroll 0 0 rgba(255, 255, 255, 0.6);
-      border-left: thick solid white;
-      -webkit-box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.1), 1px 0 10px rgba(255, 255, 255, 0.1);
-      -moz-box-shadow:    inset -1px 0 0 rgba(255, 255, 255, 0.1), 1px 0 10px rgba(255, 255, 255, 0.1);
-      box-shadow:         inset -1px 0 0 rgba(255, 255, 255, 0.1), 1px 0 10px rgba(255, 255, 255, 0.1);
+      background: none repeat scroll 0 0 fade(@white, 60%);
+      border-left: thick solid @white;
+      -webkit-box-shadow: inset -1px 0 0 fade(@white, 10%), 1px 0 10px fade(@white, 10%);
+      -moz-box-shadow:    inset -1px 0 0 fade(@white, 10%), 1px 0 10px fade(@white, 10%);
+      box-shadow:         inset -1px 0 0 fade(@white, 10%), 1px 0 10px fade(@white, 10%);
 
       position: absolute;
       bottom: 0;
@@ -71,7 +87,7 @@
 
   //    width: @column-width;
 
-      color: #0056D6;
+      color: @headingsColor;
       text-align: right;
 
       small {
@@ -80,7 +96,7 @@
         bottom: 2em;
         right: 0;
         padding: 1em;
-        color: #1F587E;
+        color: @captionsColor;
       }
     }
   }
