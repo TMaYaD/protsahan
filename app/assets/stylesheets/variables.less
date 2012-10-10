@@ -4,7 +4,11 @@
 //
 // Example:
 // @linkColor: #ff0000;
-@sansFontFamily:        "RobotoRegular", Helvetica, Arial, sans-serif;
-@headingsFontFamily:    "RobotoThin", @sansFontFamily; // empty to use BS default, @baseFontFamily
-@headingsColor:         @orange; // empty to use BS default, @textColor
-@captionsColor:         mix(@black, @headingsColor, 10%);
+@sansFontFamily:                  "RobotoRegular", Helvetica, Arial, sans-serif;
+@headingsFontFamily:              "RobotoThin", @sansFontFamily; // empty to use BS default, @baseFontFamily
+
+@headingsColor:                   @orange; // empty to use BS default, @textColor
+@captionsColor:                   mix(@black, @headingsColor, 10%);
+
+@navbarBackgroundHighlight:       fade(@white, 10%);
+@navbarBrandColor:                @orange;

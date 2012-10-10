@@ -1,6 +1,10 @@
+- content_for :head do
+  :css
+    .leader { background-image: url('#{image_path "#{params[:id]}.jpg"}'); }
+
 - content_for :content do
   .scroll-wrapper
-    %section.leader.span9{style: "background-image: url('#{image_path "#{params[:id]}.jpg"}')"}
+    %section.leader.span9
       %h2.span3
         = yield :title
         %small= yield :caption

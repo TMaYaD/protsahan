@@ -15,8 +15,9 @@
     %link(href='images/apple-touch-icon-72x72.png' rel='apple-touch-icon-precomposed' sizes='72x72')
     %link(href='images/apple-touch-icon.png' rel='apple-touch-icon-precomposed')
     %link(href='images/favicon.ico' rel='shortcut icon')
+    = yield :head
 
-  %body
+  %body{ class: auto_page_class_names }
     = content_for?(:body) ? yield(:body) : yield
     /
       Javascripts
