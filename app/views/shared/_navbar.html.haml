@@ -1,4 +1,5 @@
 = navbar.nav do
+  = navbar.item 'Gallery', article_path('gallery')
   = navbar.dropdown 'Projects' do
     = navbar.item 'Educare',         article_path('projects/educare')
     = navbar.item 'Stree',           article_path('projects/stree')

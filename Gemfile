@@ -12,8 +12,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'bootstrap-helper', :git => 'git://github.com/LoonyBin/bootstrap-helper.git'
+gem 'bootstrap-helper', :github => 'LoonyBin/bootstrap-helper'
 gem 'haml-rails'
+  gem 'haml', '~>3.2.beta'
 gem 'high_voltage'
 gem 'inherited_resources'
 gem 'jquery-rails'
@@ -22,6 +23,9 @@ gem 'redcarpet'
 gem 'unicorn'
 
 group :development, :test do
+  gem 'guard'
+    gem 'rb-inotify', '~> 0.8.8'
+  gem 'guard-unicorn'
   gem 'pry-rails'
   gem 'rspec-rails'
 end

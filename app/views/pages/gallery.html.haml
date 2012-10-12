@@ -1,0 +1,6 @@
+- provide :title, 'Gallery'
+- content_for :js do
+  :coffee
+    $ ->
+      window.router = new Protsahan.Routers.PicasaImagesRouter()
+      Backbone.history.start()
