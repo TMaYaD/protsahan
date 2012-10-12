@@ -14,6 +14,9 @@ class Protsahan.Views.PicasaImages.IndexView extends Backbone.View
     $(@el).append(view.render().el)
 
   render: =>
+    $(@el).attr
+      'data-toggle': 'modal-gallery'
+      'data-target': '#modal-gallery'
     @addAll()
 
     return this
