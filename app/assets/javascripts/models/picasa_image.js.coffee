@@ -19,7 +19,16 @@ class Protsahan.Collections.PicasaImagesCollection extends Backbone.Collection
     @user = options.user
     @album = options.album
   url: =>
-    "https://picasaweb.google.com/data/feed/api/user/#{@user}/album/#{@album}?&kind=photo&access=public&max-results=30&thumbsize=160c&imgmax=d&alt=json-in-script&callback=?"
+    base_url = "https://picasaweb.google.com/data/feed/api/user/#{@user}/album/#{@album}"
+    params =
+      kind:           'photo'
+      access:         'public'
+      'max-results':  30
+      'start-index':  1
+      thumbsize:      '160c'
+      imgmax:         'd'
+      alt:            'json-in-script'
+    "#{base_url}?#{$.param params}&callback=?"
 
   parse: (response)=>
     response.feed.entry
