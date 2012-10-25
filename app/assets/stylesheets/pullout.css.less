@@ -1,0 +1,39 @@
+@import 'variables';
+
+.pullout-nav {
+  height: @pullout-tag-height;
+  position: relative;
+  .pullout-tag {
+    width: @pullout-tag-height;
+    height: @pullout-tag-width;
+    transform: rotate(-90deg);
+    transform-origin: @pullout-tag-height/2 @pullout-tag-height/2;
+    text-align: center;
+  }
+
+  .pullout-container {
+    position: absolute;
+    left: @pullout-tag-width;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  .pullout-content {
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+
+    -webkit-transition: width 0.4s; /* Safari and Chrome */
+    -moz-transition:    width 0.4s; /* Firefox 4 */
+    -o-transition:      width 0.4s; /* Opera */
+    transition:         width 0.4s;
+  }
+
+  .pullout-tag:hover+.pullout-container>.pullout-content {
+    width: 100%;
+  }
+  .pullout-container>.pullout-content:hover {
+    width: 100%;
+  }
+}
