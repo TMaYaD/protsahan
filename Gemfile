@@ -25,6 +25,7 @@ gem 'unicorn'
 group :development, :test do
   gem 'guard'
     gem 'rb-inotify', '~> 0.8.8'
+  gem 'guard-livereload'
   gem 'guard-unicorn'
   gem 'pry-rails'
   gem 'rspec-rails'

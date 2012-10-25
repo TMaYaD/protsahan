@@ -6,15 +6,20 @@
           %h1 What is the title you want here?
           %p.caption This is what protsahan does. I know, Aren't we sweet and great!? Now, who wants to join, raise your hands...
           = link_to 'Be the change', page_path('about_us/our-team'), class: %w[btn btn-large btn-primary pull-right]
-    .row-fluid.sidenav
-      .span1{style: "background-color: red"}
-      .span6
-        %h1{style: "background-color: pink"} Test
-    .row-fluid.sidenav
-      .span1{style: "background-color: yellow"}
-    .row-fluid.sidenav
-      .span1{style: "background-color: blue"}
-    .row-fluid.sidenav
-      .span1{style: "background-color: green"}
+    .row-fluid
+      .sidenav.span12
+        .pullout-tag{style: "background-color: red"} Volunteer
+        .pullout-container
+          .pullout-content{style: "background-color: pink"}
+            %h1 Test
+    .row-fluid
+      .sidenav.span12
+        .pullout-tag{style: "background-color: yellow"} Corporate
+    .row-fluid
+      .sidenav.span12
+        .pullout-tag{style: "background-color: blue"}
+    .row-fluid
+      .sidenav.span12
+        .pullout-tag{style: "background-color: green"}
 
 

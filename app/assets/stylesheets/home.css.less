@@ -11,13 +11,27 @@ body.home {
   }
 
   .sidenav {
-    .span1 {
-      height: 4em;
-      margin-bottom: 3em;
+    @tag-height: 100px;
+    height: @tag-height;
+    position: relative;
+    .pullout-tag {
+      width: @tag-height;
+      transform: rotate(-90deg);
+      transform-origin: @tag-height/2 @tag-height/2;
+      text-align: center;
     }
 
-    h1 {
+    .pullout-container {
+      position: absolute;
+      left: @baseLineHeight;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+    .pullout-content {
       width: 0%;
+      height: 100%;
       overflow: hidden;
 
       -webkit-transition: width 0.4s; /* Safari and Chrome */
@@ -26,10 +40,10 @@ body.home {
       transition:         width 0.4s;
     }
 
-    .span1:hover+.span6>h1 {
+    .pullout-tag:hover+.pullout-container>.pullout-content {
       width: 100%;
     }
-    .span6>h1:hover {
+    .pullout-container>.pullout-content:hover {
       width: 100%;
     }
   }
