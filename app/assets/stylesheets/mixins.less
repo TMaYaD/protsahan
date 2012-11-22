@@ -1,0 +1,13 @@
+.fullscreen-background(@z-index: -999) {
+  &:before {
+    content: " ";
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: @z-index;
+  }
+}

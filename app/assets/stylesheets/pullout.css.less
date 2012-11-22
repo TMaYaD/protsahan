@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins';
 
 .pullout-nav {
   height: @pullout-tag-height;
@@ -28,12 +29,24 @@
     -moz-transition:    width 0.4s; /* Firefox 4 */
     -o-transition:      width 0.4s; /* Opera */
     transition:         width 0.4s;
+
+    .fullscreen-background(-900);
+    &:before {
+      opacity: 0;
+
+      -webkit-transition: opacity 0.8s; /* Safari and Chrome */
+      -moz-transition:    opacity 0.8s; /* Firefox 4 */
+      -o-transition:      opacity 0.8s; /* Opera */
+      transition:         opacity 0.8s;
+    }
+
   }
 
+  .pullout-container>.pullout-content:hover,
   .pullout-tag:hover+.pullout-container>.pullout-content {
     width: 100%;
-  }
-  .pullout-container>.pullout-content:hover {
-    width: 100%;
+    &:before {
+      opacity: 1;
+    }
   }
 }

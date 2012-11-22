@@ -13,21 +13,14 @@
  */
 
 @import 'variables';
+@import 'mixins';
 
 .pull-center {
   text-align: center;
 }
 
-body:before {
-  content: " ";
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: fixed;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: -999;
+body {
+  .fullscreen-background;
 }
 
 @media (min-width: 768px) {
