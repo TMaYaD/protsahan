@@ -7,9 +7,21 @@
   .pullout-tag {
     width: @pullout-tag-height;
     height: @pullout-tag-width;
-    transform: rotate(-90deg);
-    transform-origin: @pullout-tag-height/2 @pullout-tag-height/2;
+
     text-align: center;
+
+    -ms-transform     : rotate(-90deg);
+    -moz-transform    : rotate(-90deg);
+    -webkit-transform : rotate(-90deg);
+    -o-transform      : rotate(-90deg);
+    transform         : rotate(-90deg);
+
+    -ms-transform-origin     : @pullout-tag-height/2 @pullout-tag-height/2;
+    -moz-transform-origin    : @pullout-tag-height/2 @pullout-tag-height/2;
+    -webkit-transform-origin : @pullout-tag-height/2 @pullout-tag-height/2;
+    -o-transform-origin      : @pullout-tag-height/2 @pullout-tag-height/2;
+    transform-origin         : @pullout-tag-height/2 @pullout-tag-height/2;
+
   }
 
   .pullout-container {
