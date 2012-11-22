@@ -42,8 +42,8 @@
     -o-transition:      width 0.4s; /* Opera */
     transition:         width 0.4s;
 
-    .fullscreen-background(-900);
-    &:before {
+    &~.background {
+      .fullscreen-background(-900);
       opacity: 0;
 
       -webkit-transition: opacity 0.8s; /* Safari and Chrome */
@@ -51,13 +51,12 @@
       -o-transition:      opacity 0.8s; /* Opera */
       transition:         opacity 0.8s;
     }
-
   }
 
   .pullout-container>.pullout-content:hover,
   .pullout-tag:hover+.pullout-container>.pullout-content {
     width: 100%;
-    &:before {
+    &~.background {
       opacity: 1;
     }
   }

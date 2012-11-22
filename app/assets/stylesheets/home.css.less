@@ -9,8 +9,10 @@ body.home {
     color: mix(@headingsColor, @white, 20%);
   }
 
-  .pullout-content:before {
-    background-image: url('gallery.jpg');
+  .pullout-content {
+    &~.background {
+      background-image: url('gallery.jpg');
+    }
   }
 }
 
