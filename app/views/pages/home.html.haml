@@ -1,10 +1,19 @@
 .row-fluid
   .span8
     .row-fluid
+      .span12
+        .hero-unit
+          %h1 A social enterprise
+          %p.caption
+            focusing on creative education or skill development by empowering children & women at grassroot
+            communities using the five pillars of creativity: Design, Cinema, Stories, Photography & Art
+          = link_to 'Be the change', page_path('about_us/our-team'), class: %w[btn btn-large btn-primary pull-right]
+
+    .row-fluid
       .pullout-nav.span12
-        .pullout-tag{style: "background-color: red"} About Us
+        .pullout-tag{style: "background-color: #0099cc"} About Us
         .pullout-container
-          .pullout-content{style: "background-color: rgba(255,0,0,0.3)"}
+          .pullout-content{style: "background-color: rgba(51,181,229,0.3)"}
             %h1 About us
             = link_to 'our story'
             = link_to 'our team'
@@ -13,9 +22,9 @@
           .background{style: "background-image: url(http://placehold.it/1024x768/CA89AA&text=About+Us)"}
     .row-fluid
       .pullout-nav.span12
-        .pullout-tag{style: "background-color: blue"} Projects
+        .pullout-tag{style: "background-color: #9933cc"} Projects
         .pullout-container
-          .pullout-content{style: "background-color: rgba(0,0,255,0.3)"}
+          .pullout-content{style: "background-color: rgba(170,102,204,0.3)"}
             %h1 Our Projects
             = link_to 'our story'
             = link_to 'our team'
@@ -24,9 +33,9 @@
           .background{style: "background-image: url(http://placehold.it/1024x768/8996CA&text=Our+Projects)"}
     .row-fluid
       .pullout-nav.span12
-        .pullout-tag{style: "background-color: green"} Get Involved
+        .pullout-tag{style: "background-color: #669900"} Get Involved
         .pullout-container
-          .pullout-content{style: "background-color: rgba(0,255,0,0.3)"}
+          .pullout-content{style: "background-color: rgba(153,204,0,0.3)"}
             %h1 Get Involved
             = link_to 'csh/corp'
             = link_to 'social investors'
@@ -37,17 +46,8 @@
           .background{style: "background-image: url(http://placehold.it/1024x768/89CAA0&text=Getting+Involved)"}
     .row-fluid
       .pullout-nav.span12
-        .pullout-tag{style: "background-color: teal"} Founder's Message
+        .pullout-tag{style: "background-color: #ff8800"} Founder's Message
         .pullout-container
-          .pullout-content{style: "background-color: rgba(0,255,255,0.3)"}
+          .pullout-content{style: "background-color: rgba(255,187,51,0.3)"}
           .background{style: "background-image: url(http://placehold.it/1024x768/F5F5AA)"}
-
-    .row-fluid
-      .span12
-        .hero-unit
-          %h1 A social enterprise
-          %p.caption
-            focusing on creative education or skill development by empowering children & women at grassroot
-            communities using the five pillars of creativity: Design, Cinema, Stories, Photography & Art
-          = link_to 'Be the change', page_path('about_us/our-team'), class: %w[btn btn-large btn-primary pull-right]
 
