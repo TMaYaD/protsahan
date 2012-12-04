@@ -14,110 +14,12 @@
  *= require_tree .
  */
 
-@import 'variables';
-@import 'mixins';
-
 .pull-center {
   text-align: center;
 }
 
+@import 'mixins';
+
 body:before {
   .fullscreen-background;
-}
-
-@media (min-width: 768px) {
-  header, #body, footer {
-    position: fixed;
-    left: 0;
-    right: 0;
-  }
-
-  @header-height: 62px;
-  @footer-height: 4em;
-
-  header {
-    top: 0;
-    max-height: @header-height;
-  }
-  #body {
-    top: @header-height;
-    bottom: @footer-height;
-  }
-  footer {
-    max-height: @footer-height;
-    bottom: 0;
-  }
-
-  #body {
-    overflow-x: auto;
-    overflow-y: -moz-hidden-unscrollable;
-    z-index: -1;
-    -webkit-overflow-scrolling: touch;
-    overflow-scrolling: touch;
-  }
-
-  .scroll-wrapper {
-    height: 100%;
-    float: left;
-    margin-right: -30000px;
-  }
-
-  @column-width: 325px; //Make responsive
-  @column-gap: 30px;
-
-  .leader {
-    background-image: url('http://placehold.it/1170x500');
-    background-position: 0px;
-    -webkit-background-size:  cover;
-    -moz-background-size:     cover;
-    background-size:          cover;
-    background-repeat: no-repeat;
-
-    font-size: xx-large;
-    position: relative;
-    height: 100%;
-  //  width: 4 * @column-width;
-
-    h2 {
-      background: none repeat scroll 0 0 fade(@white, 60%);
-      border-left: thick solid @white;
-      -webkit-box-shadow: inset -1px 0 0 fade(@white, 10%), 1px 0 10px fade(@white, 10%);
-      -moz-box-shadow:    inset -1px 0 0 fade(@white, 10%), 1px 0 10px fade(@white, 10%);
-      box-shadow:         inset -1px 0 0 fade(@white, 10%), 1px 0 10px fade(@white, 10%);
-
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      top: 0;
-      margin: 0;
-      padding: 1em;
-
-  //    width: @column-width;
-
-      color: @headingsColor;
-      text-align: right;
-
-      small {
-        display: block;
-        position: absolute;
-        bottom: 2em;
-        right: 0;
-        padding: 1em;
-        color: @captionsColor;
-      }
-    }
-  }
-
-  .content {
-    -webkit-column-width: @column-width;
-    -moz-column-width:    @column-width;
-    column-width:         @column-width;
-
-    -webkit-column-gap:   @column-gap;
-    -moz-column-gap:      @column-gap;
-    column-gap:           @column-gap;
-  //  width: @column-width;
-    height: 100%;
-  }
-
 }

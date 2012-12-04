@@ -1,10 +1,10 @@
 .container
   .row
-    .span3.bs-docs-sidebar
+    .span2.bs-docs-sidebar
       &nbsp;
       = render 'shared/navigation', class_name: 'nav-list affix bs-docs-sidenav'
 
-    .span6.center
+    .span7.center
       .page-header
         %h1
           Protsahan
@@ -16,11 +16,24 @@
 
       #banner.carousel.slide{data: {interval: 2000}}
         .carousel-inner
-          %img.item.active{src: 'http://placehold.it/1024x768/CA89AA&text=About+Us'}
-          %img.item{src: 'http://placehold.it/1024x768/F5F5AA'}
-          %img.item{src: 'http://placehold.it/1024x768/89CAA0&text=Getting+Involved'}
-          %img.item{src: 'http://placehold.it/1024x768/8996CA&text=Our+Projects'}
+          = image_tag 'home.jpg', class: %w(item active)
+          = image_tag 'gallery.jpg', class: %w(item)
+          = image_tag 'contact_us.jpg', class: %w(item)
+          = image_tag 'projects/educare.jpg', class: %w(item)
+          = image_tag 'about_us/our-team.jpg', class: %w(item)
 
     .span3.social
+      = link_to  page_path('donate'), class: %w(donate btn btn-large btn-block btn-success show-grid) do
+        %i.icon-gift
+        Donate
       = render 'shared/like_box'
+
+%footer.container
+  .row
+    %h3.span12 We are supported by
+  %ul.row.unstyled
+    %li.span1= image_tag 'world_bank.jpg'
+    %li.span2= image_tag 'airtel.png'
+    %li.span1= image_tag 'pvr_nest.jpg'
+    %li.span2= image_tag 'loonybin.png'
 
