@@ -1,26 +1,31 @@
 .container
   .row
     .span2.bs-docs-sidebar
-      &nbsp;
       = render 'shared/navigation', class_name: 'nav-list affix bs-docs-sidenav'
 
-    .span7.center
-      .page-header
-        %h1
-          Protsahan
-          %small (n). Encouragement ...
-        %p.caption
-          A social enterprise focusing on creative education or skill development by empowering children
-          &amp; women at grassroot communities using the five pillars of creativity: Design, Cinema, Stories,
-          Photography &amp; Art
+    .span9.center
+      .row
+        .span7.offset2
+          .page-header
+            %h1
+              Protsahan
+            %p.caption
+              A social enterprise focusing on creative education or skill development by empowering children
+              &amp; women at grassroot communities using the five pillars of creativity: Design, Cinema, Stories,
+              Photography &amp; Art
 
-      #banner.carousel.slide{data: {interval: 2000}}
-        .carousel-inner
-          = image_tag 'home.jpg', class: %w(item active)
-          = image_tag 'gallery.jpg', class: %w(item)
-          = image_tag 'contact_us.jpg', class: %w(item)
-          = image_tag 'projects/educare.jpg', class: %w(item)
-          = image_tag 'about_us/our-team.jpg', class: %w(item)
+      .row
+        .span2.stick_figure
+          &nbsp;
+          = image_tag 'stick_figure.jpg'
+        .span7
+          #banner.carousel.slide{data: {interval: 2000}}
+            .carousel-inner
+              = image_tag 'home.jpg', class: %w(item active)
+              = image_tag 'gallery.jpg', class: %w(item)
+              = image_tag 'contact_us.jpg', class: %w(item)
+              = image_tag 'projects/educare.jpg', class: %w(item)
+              = image_tag 'about_us/our-team.jpg', class: %w(item)
 
     .span3.social
       = link_to  page_path('donate'), class: %w(donate btn btn-large btn-block btn-success show-grid) do

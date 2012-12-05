@@ -1,10 +1,11 @@
 - content_for :head do
   :css
-    .leader { background-image: url('#{image_path "#{params[:id]}.jpg"}'); }
+    body.articles .leader { background-image: url('#{image_path "#{params[:id]}.jpg"}'); }
 
 - content_for :content do
   .scroll-wrapper
     %section.leader.span8
+      .affix= render 'shared/navigation', class_name: 'nav-list affix bs-docs-sidenav'
       %h2.span3
         = yield :title
         %small= yield :caption
