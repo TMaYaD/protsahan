@@ -1,89 +1,92 @@
 @import 'variables';
 @import 'mixins';
 
-.nav-pullout {
-  &>li {
-    height: @pullout-tag-height;
-    position: relative;
+@media screen and (min-height: 600px) {
+  .nav-pullout {
+    position: fixed;
+    &>li {
+      height: @pullout-tag-height;
+      position: relative;
 
-    &>a {
-      width: @pullout-tag-height;
-      height: @pullout-tag-width;
+      &>a {
+        width: @pullout-tag-height;
+        height: @pullout-tag-width;
 
-      text-align: center;
+        text-align: center;
 
-      -ms-transform     : rotate(-90deg);
-      -moz-transform    : rotate(-90deg);
-      -webkit-transform : rotate(-90deg);
-      -o-transform      : rotate(-90deg);
-      transform         : rotate(-90deg);
+        -ms-transform     : rotate(-90deg);
+        -moz-transform    : rotate(-90deg);
+        -webkit-transform : rotate(-90deg);
+        -o-transform      : rotate(-90deg);
+        transform         : rotate(-90deg);
 
-      -ms-transform-origin     : @pullout-tag-height/2 @pullout-tag-height/2;
-      -moz-transform-origin    : @pullout-tag-height/2 @pullout-tag-height/2;
-      -webkit-transform-origin : @pullout-tag-height/2 @pullout-tag-height/2;
-      -o-transform-origin      : @pullout-tag-height/2 @pullout-tag-height/2;
-      transform-origin         : @pullout-tag-height/2 @pullout-tag-height/2;
+        -ms-transform-origin     : @pullout-tag-height/2 @pullout-tag-height/2;
+        -moz-transform-origin    : @pullout-tag-height/2 @pullout-tag-height/2;
+        -webkit-transform-origin : @pullout-tag-height/2 @pullout-tag-height/2;
+        -o-transform-origin      : @pullout-tag-height/2 @pullout-tag-height/2;
+        transform-origin         : @pullout-tag-height/2 @pullout-tag-height/2;
 
-    }
-  }
-
-  .dropdown {
-    .dropdown-menu {
-      top: 0;
-      left: @pullout-tag-width/2;
-      right: 100%;
-      display: block;
-      min-width: 0;
-      overflow-x: hidden;
-
-      -webkit-transition: right 0.4s; /* Safari and Chrome */
-      -moz-transition:    right 0.4s; /* Firefox 4 */
-      -o-transition:      right 0.4s; /* Opera */
-      transition:         right 0.4s;
-
+      }
     }
 
-    &.open .dropdown-menu {
-      right: 0%;
-    }
-  }
+    .dropdown {
+      .dropdown-menu {
+        top: 0;
+        left: @pullout-tag-width/2;
+        right: 100%;
+        display: block;
+        min-width: 0;
+        overflow-x: hidden;
 
-  &>li {
-    &>a {
-      color: @white;
+        -webkit-transition: right 0.4s; /* Safari and Chrome */
+        -moz-transition:    right 0.4s; /* Firefox 4 */
+        -o-transition:      right 0.4s; /* Opera */
+        transition:         right 0.4s;
+
+      }
+
+      &.open .dropdown-menu {
+        right: 0%;
+      }
     }
 
-    &:nth-child(5n+1)>a {
-      background-color: #33B5E5;
+    &>li {
+      &>a {
+        color: @white;
+      }
+
+      &:nth-child(5n+1)>a {
+        background-color: #33B5E5;
+      }
+      &:nth-child(5n+2)>a {
+        background-color: #AA66CC;
+      }
+      &:nth-child(5n+3)>a {
+        background-color: #99CC00;
+      }
+      &:nth-child(5n+4)>a {
+        background-color: #FFBB33;
+      }
+      &:nth-child(5n+0)>a {
+        background-color: #FF4444;
+      }
     }
-    &:nth-child(5n+2)>a {
-      background-color: #AA66CC;
-    }
-    &:nth-child(5n+3)>a {
-      background-color: #99CC00;
-    }
-    &:nth-child(5n+4)>a {
-      background-color: #FFBB33;
-    }
-    &:nth-child(5n+0)>a {
-      background-color: #FF4444;
-    }
-  }
-  li.open {
-    &:nth-child(5n+1)>a {
-      background-color: #0099CC;
-    }
-    &:nth-child(5n+2)>a {
-      background-color: #9933CC;
-    }
-    &:nth-child(5n+3)>a {
-      background-color: #669900;
-    }
-    &:nth-child(5n+4)>a {
-      background-color: #FF8800;
-    }
-    &:nth-child(5n+0)>a {
-      background-color: #CC0000;
+    li.open {
+      &:nth-child(5n+1)>a {
+        background-color: #0099CC;
+      }
+      &:nth-child(5n+2)>a {
+        background-color: #9933CC;
+      }
+      &:nth-child(5n+3)>a {
+        background-color: #669900;
+      }
+      &:nth-child(5n+4)>a {
+        background-color: #FF8800;
+      }
+      &:nth-child(5n+0)>a {
+        background-color: #CC0000;
+      }
     }
   }
 }
