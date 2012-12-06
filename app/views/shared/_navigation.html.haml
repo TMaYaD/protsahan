@@ -1,0 +1,22 @@
+%ul.nav{class: class_name}
+  %li= link_to 'Gallery', article_path('gallery')
+  %li.dropdown
+    %a.dropdown-toggle{href: '#', data: {toggle: 'dropdown'}}
+      About Us
+      %b.caret
+    %ul.dropdown-menu
+      %li= link_to 'Organizational Profile',  article_path('about_us/organizational-profile')
+      %li= link_to 'Strategic Focus',         article_path('about_us/strategic-focus')
+      %li= link_to 'Our Rationale',           article_path('about_us/our-rationale')
+      %li= link_to 'Our Team',                article_path('about_us/our-team')
+      %li= link_to 'Work Culture',            article_path('about_us/work-culture')
+      %li= link_to 'Recognition Received',    article_path('about_us/recognition-received')
+  %li.dropdown
+    %a.dropdown-toggle{href: '#', data: {toggle: 'dropdown'}}
+      Projects
+      %b.caret
+    %ul.dropdown-menu
+      %li= link_to 'Educare',         article_path('projects/educare')
+      %li= link_to 'Stree',           article_path('projects/stree')
+      %li= link_to 'Artisan Honour',  article_path('projects/artisan-honour')
+  %li= link_to 'Get Involved', article_path('contact_us')

@@ -1,63 +1,96 @@
 @import 'variables';
 @import 'mixins';
 
-.pullout-nav {
-  height: @pullout-tag-height;
-  position: relative;
-  .pullout-tag {
-    width: @pullout-tag-height;
-    height: @pullout-tag-width;
+@media screen and (min-height: 600px) {
+  .nav-pullout {
+    position: fixed;
+    z-index: 1000;
+    &>li:not(.brand) {
+      height: @pullout-tag-height;
+      position: relative;
 
-    text-align: center;
+      &>a {
+        width: @pullout-tag-height;
+        height: @pullout-tag-width;
 
-    -ms-transform     : rotate(-90deg);
-    -moz-transform    : rotate(-90deg);
-    -webkit-transform : rotate(-90deg);
-    -o-transform      : rotate(-90deg);
-    transform         : rotate(-90deg);
+        text-align: center;
 
-    -ms-transform-origin     : @pullout-tag-height/2 @pullout-tag-height/2;
-    -moz-transform-origin    : @pullout-tag-height/2 @pullout-tag-height/2;
-    -webkit-transform-origin : @pullout-tag-height/2 @pullout-tag-height/2;
-    -o-transform-origin      : @pullout-tag-height/2 @pullout-tag-height/2;
-    transform-origin         : @pullout-tag-height/2 @pullout-tag-height/2;
+        -ms-transform     : rotate(-90deg);
+        -moz-transform    : rotate(-90deg);
+        -webkit-transform : rotate(-90deg);
+        -o-transform      : rotate(-90deg);
+        transform         : rotate(-90deg);
 
-  }
+        -ms-transform-origin     : @pullout-tag-height/2 @pullout-tag-height/2;
+        -moz-transform-origin    : @pullout-tag-height/2 @pullout-tag-height/2;
+        -webkit-transform-origin : @pullout-tag-height/2 @pullout-tag-height/2;
+        -o-transform-origin      : @pullout-tag-height/2 @pullout-tag-height/2;
+        transform-origin         : @pullout-tag-height/2 @pullout-tag-height/2;
 
-  .pullout-container {
-    position: absolute;
-    left: @pullout-tag-width;
-    right: 0;
-    top: 0;
-    bottom: 0;
-  }
-
-  .pullout-content {
-    width: 0%;
-    height: 100%;
-    overflow: hidden;
-
-    -webkit-transition: width 0.4s; /* Safari and Chrome */
-    -moz-transition:    width 0.4s; /* Firefox 4 */
-    -o-transition:      width 0.4s; /* Opera */
-    transition:         width 0.4s;
-
-    &~.background {
-      .fullscreen-background(-900);
-      opacity: 0;
-
-      -webkit-transition: opacity 0.8s; /* Safari and Chrome */
-      -moz-transition:    opacity 0.8s; /* Firefox 4 */
-      -o-transition:      opacity 0.8s; /* Opera */
-      transition:         opacity 0.8s;
+      }
     }
-  }
 
-  .pullout-container>.pullout-content:hover,
-  .pullout-tag:hover+.pullout-container>.pullout-content {
-    width: 100%;
-    &~.background {
-      opacity: 1;
+    .dropdown {
+      .dropdown-menu {
+        top: 0;
+        left: @pullout-tag-width/2;
+        width: 0;
+        display: block;
+        min-width: 0;
+        overflow-x: hidden;
+        border: none;
+        background-color: rgba(255,255,255,0.6);
+
+        -webkit-transition: width 0.4s; /* Safari and Chrome */
+        -moz-transition:    width 0.4s; /* Firefox 4 */
+        -o-transition:      width 0.4s; /* Opera */
+        transition:         width 0.4s;
+
+      }
+
+      &.open .dropdown-menu {
+        width: @pullout-tag-height * 2.5;
+      }
+    }
+
+    &>li:not(.brand) {
+      &>a {
+        color: @white;
+        padding: 4px 0;
+      }
+
+      &:nth-child(5n+1)>a {
+        background-color: #33B5E5;
+      }
+      &:nth-child(5n+2)>a {
+        background-color: #AA66CC;
+      }
+      &:nth-child(5n+3)>a {
+        background-color: #99CC00;
+      }
+      &:nth-child(5n+4)>a {
+        background-color: #FF4444;
+      }
+      &:nth-child(5n+0)>a {
+        background-color: #FFBB33;
+      }
+    }
+    li.open {
+      &:nth-child(5n+1)>a {
+        background-color: #0099CC;
+      }
+      &:nth-child(5n+2)>a {
+        background-color: #9933CC;
+      }
+      &:nth-child(5n+3)>a {
+        background-color: #669900;
+      }
+      &:nth-child(5n+4)>a {
+        background-color: #CC0000;
+      }
+      &:nth-child(5n+0)>a {
+        background-color: #FF8800;
+      }
     }
   }
 }

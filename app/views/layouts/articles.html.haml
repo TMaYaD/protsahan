@@ -1,6 +1,6 @@
 - content_for :head do
   :css
-    .leader { background-image: url('#{image_path "#{params[:id]}.jpg"}'); }
+    body.articles .leader { background-image: url('#{image_path "#{params[:id]}.jpg"}'); }
 
 - content_for :content do
   .scroll-wrapper
