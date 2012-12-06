@@ -1,12 +1,11 @@
 - content_for :body do
   %header
-    - topbar :fluid => true do |bar|
-      = bar.collapse
-      = bar.brand_name 'Protsahan', root_path
-      %p.pull-left.navbar-text (n.) Encouragement
-      %p.pull-left.divider-vertical
+    =link_to root_path do
+      %h1.offset1
+        Protsahan
+        %small (n.) Encouragement
 
-      = render 'shared/navbar', navbar: bar
+    = render 'shared/navigation', class_name: 'nav-list nav-pullout'
 
   #body= content_for?(:content) ? yield(:content) : yield
 
