@@ -4,8 +4,8 @@
 
 - content_for :content do
   .scroll-wrapper
+    = render 'shared/navigation', class_name: 'nav-list nav-pullout span6'
     %section.leader.span8
-      .affix= render 'shared/navigation', class_name: 'nav-list affix bs-docs-sidenav'
       %h2.span3
         = yield :title
         %small= yield :caption
