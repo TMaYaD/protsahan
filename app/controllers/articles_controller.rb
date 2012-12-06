@@ -3,7 +3,7 @@ class ArticlesController < HighVoltage::PagesController
 
 private
   def get_layout
-    return 'skeleton' if ['home'].include? params[:id]
+    return 'application' if ['home'].include? params[:id]
     return 'articles'
   end
 end

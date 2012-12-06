@@ -5,7 +5,7 @@
   .nav-pullout {
     position: fixed;
     z-index: 1000;
-    &>li {
+    &>li:not(.brand) {
       height: @pullout-tag-height;
       position: relative;
 
@@ -34,26 +34,29 @@
       .dropdown-menu {
         top: 0;
         left: @pullout-tag-width/2;
-        right: 100%;
+        width: 0;
         display: block;
         min-width: 0;
         overflow-x: hidden;
+        border: none;
+        background-color: rgba(255,255,255,0.6);
 
-        -webkit-transition: right 0.4s; /* Safari and Chrome */
-        -moz-transition:    right 0.4s; /* Firefox 4 */
-        -o-transition:      right 0.4s; /* Opera */
-        transition:         right 0.4s;
+        -webkit-transition: width 0.4s; /* Safari and Chrome */
+        -moz-transition:    width 0.4s; /* Firefox 4 */
+        -o-transition:      width 0.4s; /* Opera */
+        transition:         width 0.4s;
 
       }
 
       &.open .dropdown-menu {
-        right: 0%;
+        width: @pullout-tag-height * 2.5;
       }
     }
 
-    &>li {
+    &>li:not(.brand) {
       &>a {
         color: @white;
+        padding: 4px 0;
       }
 
       &:nth-child(5n+1)>a {
@@ -66,10 +69,10 @@
         background-color: #99CC00;
       }
       &:nth-child(5n+4)>a {
-        background-color: #FFBB33;
+        background-color: #FF4444;
       }
       &:nth-child(5n+0)>a {
-        background-color: #FF4444;
+        background-color: #FFBB33;
       }
     }
     li.open {
@@ -83,10 +86,10 @@
         background-color: #669900;
       }
       &:nth-child(5n+4)>a {
-        background-color: #FF8800;
+        background-color: #CC0000;
       }
       &:nth-child(5n+0)>a {
-        background-color: #CC0000;
+        background-color: #FF8800;
       }
     }
   }

@@ -1,5 +1,11 @@
 - content_for :body do
-  = render 'shared/navigation', class_name: 'nav-list nav-pullout span6'
+  %header
+    =link_to root_path do
+      %h1.offset1
+        Protsahan
+        %small (n.) Encouragement
+
+    = render 'shared/navigation', class_name: 'nav-list nav-pullout'
 
   #body= content_for?(:content) ? yield(:content) : yield
 
