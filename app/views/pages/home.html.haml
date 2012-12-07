@@ -28,12 +28,12 @@
         Donate
       = render 'shared/like_box'
 
-%footer.container
   .row
-    %h3.span12 We are supported by
-  %ul.row.unstyled
-    %li.span1= image_tag 'world_bank.jpg'
-    %li.span2= image_tag 'airtel.png'
-    %li.span1= image_tag 'pvr_nest.jpg'
-    %li.span2= image_tag 'loonybin.png'
+    .offset1.span11
+      %h3 We are supported by
+      %ul.thumbnails
+        %li.span1= image_tag 'world_bank.jpg', class: :thumbnail
+        %li.span2= image_tag 'airtel.png', class: :thumbnail
+        %li.span1= image_tag 'pvr_nest.jpg', class: :thumbnail
+        %li.span2= image_tag 'loonybin.png', class: :thumbnail
 
